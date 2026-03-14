@@ -2,27 +2,21 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity tt_um_example is
+entity tt_um_aromo613harwo861hamse755arvno337 is
     port (
+        ui_in   : in  std_logic_vector(7 downto 0); -- 3 till 0 minsta är kypd_rows
+        uo_out  : out std_logic_vector(7 downto 0); -- bit 6 är display_data, bit 5 är display_cs, bit 4 är display_clk, 3 till 0 minsta är kypd_cols
+        uio_in  : in  std_logic_vector(7 downto 0);
+        uio_out : out std_logic_vector(7 downto 0);
+        uio_oe  : out std_logic_vector(7 downto 0);
+
+        ena     : in  std_logic;
         clk     : in  std_logic;
-        rst_n   : in  std_logic;
-
-        -- För drawer
-        display_data : out std_logic;
-        display_cs   : out std_logic;
-        display_clk  : out std_logic;
-
-        -- för Keypad
-        kypd_rows    : in  std_logic_vector(3 downto 0);
-        kypd_cols    : out std_logic_vector(3 downto 0);
-
-        -- DEBUG
-        sw : in std_logic_vector(3 downto 0);
-        led : out std_logic_vector(15 downto 0)
+        rst_n   : in  std_logic
     );
-end tt_um_example;
+end tt_um_aromo613harwo861hamse755arvno337;
 
-architecture Behavioral of tt_um_example is
+architecture Behavioral of tt_um_aromo613harwo861hamse755arvno337 is
 
 
 component drawer
@@ -52,23 +46,22 @@ end component;
     signal grid : std_logic_vector(15 downto 0) := "0110011001100110";
 
 begin
-    led <= grid;
-    display_clk <= clk;
+    uo_out(4) <= clk;
     main_drawer : drawer
         port map (
             clk => clk,
             data_in => grid,
             rst_n => rst_n,
-            data_out => display_data,
-            cs => display_cs
+            data_out => uo_out(6),
+            cs => uo_out(5)
         );
     
     main_KYPD_encoder : PmodKYPD
         port map (
             clk => clk,
             rst => rst_n,
-            row => kypd_rows,
-            col => kypd_cols,
+            row => ui_in(3 downto 0),
+            col => uo_out(3 downto 0),
             key => input,
             strobe => strobe
         );
