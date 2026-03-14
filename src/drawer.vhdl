@@ -19,6 +19,9 @@ architecture Behavioral of drawer is
     signal get_word : std_logic := '1';
     signal init     : unsigned (2 downto 0) := "100";
 
+    -- SKIT
+    signal row_ext : unsigned(3 downto 0);
+    signal row_slv : std_logic_vector(3 downto 0);
 
 
 begin
@@ -64,7 +67,11 @@ begin
             
             -- Normal game loop, above is init
             else  
-                curr_word <= "0000" & std_logic_vector(row + 2)(3 downto 0) & "00" & data_in(row*4 + 3 downto row*4) & "00"; -- pro
+
+                curr_word <= "0000" &
+                row_slv(3 downto 0) &
+                "00" & data_in(to_integer(row)*4 + 3 downto to_integer(row)*4) &
+                "00"; -- pro
                 row <= row + 1; -- Overflows
             end if;
         else
@@ -82,5 +89,7 @@ begin
     end if;
     end process;
 
+    row_ext <= resize(row, 4) + 2;
+    row_slv <= std_logic_vector(row_ext);
    
 end Behavioral;
