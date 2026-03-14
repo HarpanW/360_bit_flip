@@ -10,6 +10,7 @@ entity tt_um_example is
         -- För drawer
         display_data : out std_logic;
         display_cs   : out std_logic;
+        display_clk  : out std_logic;
 
         -- för Keypad
         kypd_rows    : in  std_logic_vector(3 downto 0);
@@ -46,7 +47,7 @@ end component;
     signal grid : std_logic_vector(15 downto 0) := (others => '0');
 
 begin
-
+    display_clk <= clk;
     main_drawer : drawer
         port map (
             clk => clk,
@@ -68,7 +69,7 @@ begin
 
     process(clk, rst_n)
     begin
-        if rst_n = '0' then
+        if rst_n = '1' then
             grid <= (others => '0');
         elsif rising_edge(clk) then
             if strobe = '1' then

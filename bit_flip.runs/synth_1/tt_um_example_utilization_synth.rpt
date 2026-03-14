@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sat Mar 14 16:01:31 2026
+| Date         : Sat Mar 14 16:56:01 2026
 | Host         : muxen2-111.ad.liu.se running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file tt_um_example_utilization_synth.rpt -pb tt_um_example_utilization_synth.pb
 | Design       : tt_um_example
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  102 |     0 |          0 |     20800 |  0.49 |
-|   LUT as Logic          |  102 |     0 |          0 |     20800 |  0.49 |
+| Slice LUTs*             |   98 |     0 |          0 |     20800 |  0.47 |
+|   LUT as Logic          |   98 |     0 |          0 |     20800 |  0.47 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
 | Slice Registers         |   78 |     0 |          0 |     41600 |  0.19 |
 |   Register as Flip Flop |   78 |     0 |          0 |     41600 |  0.19 |
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   12 |     0 |          0 |       106 | 11.32 |
+| Bonded IOB                  |   13 |     0 |          0 |       106 | 12.26 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -152,16 +152,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   61 |        Flop & Latch |
-| LUT6     |   52 |                 LUT |
-| LUT4     |   29 |                 LUT |
-| LUT5     |   23 |                 LUT |
-| LUT3     |   19 |                 LUT |
+| LUT6     |   47 |                 LUT |
+| LUT4     |   37 |                 LUT |
+| LUT5     |   19 |                 LUT |
 | FDCE     |   16 |        Flop & Latch |
+| LUT3     |   15 |                 LUT |
 | LUT2     |    9 |                 LUT |
-| OBUF     |    6 |                  IO |
+| OBUF     |    7 |                  IO |
 | IBUF     |    6 |                  IO |
 | CARRY4   |    5 |          CarryLogic |
-| LUT1     |    4 |                 LUT |
+| LUT1     |    3 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

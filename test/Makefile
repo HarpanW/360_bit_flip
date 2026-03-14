@@ -2,7 +2,7 @@
 # See https://docs.cocotb.org/en/stable/quickstart.html for more info
 
 # List your source files here:
-SOURCE_FILES = project.vhdl
+SOURCE_FILES = project.vhdl KYPD_encoder.vhdl drawer.vhdl
 
 # Common
 WAVES ?= 1

@@ -125,6 +125,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 5
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param synth.incrementalSynthesisCache ./.Xil/Vivado-116645-muxen2-111.ad.liu.se/incrSyn

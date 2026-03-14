@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sat Mar 14 16:02:05 2026
+| Date         : Sat Mar 14 16:56:34 2026
 | Host         : muxen2-111.ad.liu.se running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_control_sets -verbose -file tt_um_example_control_sets_placed.rpt
 | Design       : tt_um_example
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              22 |           10 |
+| No           | No                    | No                     |              22 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              35 |           13 |
-| Yes          | No                    | No                     |               4 |            3 |
+| No           | Yes                   | No                     |              35 |           12 |
+| Yes          | No                    | No                     |               4 |            2 |
 | Yes          | No                    | Yes                    |              16 |            4 |
 | Yes          | Yes                   | No                     |               1 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,16 +70,16 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+----------------------------------+------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |           Enable Signal          |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+----------------------------------+------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | main_drawer/p_1_in               | main_drawer/data_out_i_1_n_0 |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG |                                  | rst_n_IBUF                   |                4 |              4 |         1.00 |
-|  clk_IBUF_BUFG | main_KYPD_encoder/key[3]_i_1_n_0 |                              |                3 |              4 |         1.33 |
-|  clk_IBUF_BUFG |                                  | main_drawer/get_word         |                4 |             11 |         2.75 |
-|  clk_IBUF_BUFG | main_KYPD_encoder/E[0]           | grid[15]_i_2_n_0             |                4 |             16 |         4.00 |
-|  clk_IBUF_BUFG |                                  | main_KYPD_encoder/timer0     |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG |                                  |                              |               10 |             22 |         2.20 |
-+----------------+----------------------------------+------------------------------+------------------+----------------+--------------+
++------------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
+|      Clock Signal      |           Enable Signal          |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
+|  display_clk_OBUF_BUFG | main_drawer/p_1_in               | main_drawer/data_out_i_1_n_0 |                1 |              1 |         1.00 |
+|  display_clk_OBUF_BUFG |                                  | rst_n_IBUF                   |                3 |              4 |         1.33 |
+|  display_clk_OBUF_BUFG | main_KYPD_encoder/key[3]_i_1_n_0 |                              |                2 |              4 |         2.00 |
+|  display_clk_OBUF_BUFG |                                  | main_drawer/get_word         |                4 |             11 |         2.75 |
+|  display_clk_OBUF_BUFG | main_KYPD_encoder/E[0]           | rst_n_IBUF                   |                4 |             16 |         4.00 |
+|  display_clk_OBUF_BUFG |                                  | main_KYPD_encoder/timer0     |                5 |             20 |         4.00 |
+|  display_clk_OBUF_BUFG |                                  |                              |                8 |             22 |         2.75 |
++------------------------+----------------------------------+------------------------------+------------------+----------------+--------------+
 
 

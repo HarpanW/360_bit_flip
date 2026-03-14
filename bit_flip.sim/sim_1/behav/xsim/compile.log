@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/harwo861/Desktop/360_bit_flip/src/KYPD_encoder.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PmodKYPD'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/harwo861/Desktop/360_bit_flip/src/drawer.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'drawer'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/harwo861/Desktop/360_bit_flip/src/project.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tt_um_example'

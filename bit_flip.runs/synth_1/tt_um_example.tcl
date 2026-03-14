@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 5
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-116645-muxen2-111.ad.liu.se/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -104,7 +106,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/harwo861/Desktop/360_bit_flip/src/Basys3.xdc
+set_property used_in_implementation false [get_files /home/harwo861/Desktop/360_bit_flip/src/Basys3.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/harwo861/Desktop/360_bit_flip/bit_flip.srcs/utils_1/imports/synth_1/tt_um_example.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
