@@ -14,7 +14,11 @@ entity tt_um_example is
 
         -- för Keypad
         kypd_rows    : in  std_logic_vector(3 downto 0);
-        kypd_cols    : out std_logic_vector(3 downto 0)
+        kypd_cols    : out std_logic_vector(3 downto 0);
+
+        -- DEBUG
+        sw : in std_logic_vector(3 downto 0);
+        led : out std_logic_vector(15 downto 0)
     );
 end tt_um_example;
 
@@ -38,15 +42,17 @@ component PmodKYPD
         row     : in  std_logic_vector(3 downto 0);  -- ROW1–ROW4
         col     : out std_logic_vector(3 downto 0);  -- COL1–COL4
         key : out std_logic_vector(3 downto 0);  -- hex value 0–F
-        strobe: out std_logic                      -- high when a key is
+        strobe : out std_logic                      -- high when a key is
     );
 end component;
 
     signal input : std_logic_vector(3 downto 0);
-    signal strobe : std_logic;
-    signal grid : std_logic_vector(15 downto 0) := (others => '0');
+    signal strobe : std_logic := '0';
+    signal prev_strobe : std_logic;
+    signal grid : std_logic_vector(15 downto 0) := "0110011001100110";
 
 begin
+    led <= grid;
     display_clk <= clk;
     main_drawer : drawer
         port map (
@@ -72,7 +78,9 @@ begin
         if rst_n = '1' then
             grid <= (others => '0');
         elsif rising_edge(clk) then
-            if strobe = '1' then
+            prev_strobe <= strobe;
+
+            if strobe = '1' and prev_strobe = '0' then
                 case input is
                     
                     -- 1st row

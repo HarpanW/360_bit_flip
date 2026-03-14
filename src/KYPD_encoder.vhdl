@@ -92,43 +92,43 @@ begin
 				if (scan = '1') then
 					if (col_i = "0111") then		-- col 1
 						if (row = "0111") then		-- row 1
-							key_i <= "10001";				-- key 1
+							key_i <= "10000";				-- key 1
 						elsif (row = "1011") then	-- row 2
 							key_i <= "10100";				-- key 4
 						elsif (row = "1101") then	-- row 3
-							key_i <= "10111";				-- key 7
+							key_i <= "11000";				-- key 7
 						elsif (row = "1110") then	-- row 4
-							key_i <= "10000";				-- key 0
+							key_i <= "11100";				-- key 0
 						end if;
 					elsif (col_i = "1011") then	-- col 2
 						if (row = "0111") then		-- row 1
-							key_i <= "10010";				-- key 2
+							key_i <= "10001";				-- key 2
 						elsif (row = "1011") then	-- row 2
 							key_i <= "10101";				-- key 5
 						elsif (row = "1101") then	-- row 3
-							key_i <= "11000";				-- key 8
+							key_i <= "11001";				-- key 8
 						elsif (row = "1110") then	-- row 4
-							key_i <= "11111";				-- key F
+							key_i <= "11101";				-- key F
 						end if;
 					elsif (col_i = "1101") then	-- col 3
 						if (row = "0111") then		-- row 1
-							key_i <= "10011";				-- key 3
+							key_i <= "10010";				-- key 3
 						elsif (row = "1011") then	-- row 2
 							key_i <= "10110";				-- key 6
 						elsif (row = "1101") then	-- row 3
-							key_i <= "11001";				-- key 9
+							key_i <= "11010";				-- key 9
 						elsif (row = "1110") then	-- row 4
 							key_i <= "11110";				-- key E
 						end if;
 					elsif (col_i = "1110") then	-- col 4
 						if (row = "0111") then		-- row 1
-							key_i <= "11010";				-- key A
+							key_i <= "10011";				-- key A
 						elsif (row = "1011") then	-- row 2
-							key_i <= "11011";				-- key B
+							key_i <= "10111";				-- key B
 						elsif (row = "1101") then	-- row 3
-							key_i <= "11100";				-- key C
+							key_i <= "11011";				-- key C
 						elsif (row = "1110") then	-- row 4
-							key_i <= "11101";				-- key D
+							key_i <= "11111";				-- key D
 						end if;
 					elsif (col_i = "1111") then	-- no column
 						if (key_i(4) = '1') then	-- key pressed during scan?

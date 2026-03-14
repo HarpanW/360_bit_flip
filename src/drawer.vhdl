@@ -62,7 +62,7 @@ begin
                 curr_word <= x"0900"; -- Vi anger varje pixel manuellt (Oklart)
                 init <= init - 1;
             elsif init = 1 then 
-                curr_word <= x"0A0F"; -- Maximal ljusstyrka
+                curr_word <= x"0A08"; -- Maximal ljusstyrka
                 init <= init - 1;
             
             -- Normal game loop, above is init
