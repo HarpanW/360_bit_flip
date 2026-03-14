@@ -4,21 +4,67 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity tt_um_example is
     port (
-        output_grid  : out std_logic_vector(15 downto 0);
-        input     : in std_logic_vector(3 downto 0);
-        strobe     : in std_logic;
         clk     : in  std_logic;
-        rst_n   : in  std_logic
+        rst_n   : in  std_logic;
+
+        -- För drawer
+        display_data : out std_logic;
+        display_cs   : out std_logic;
+
+        -- för Keypad
+        kypd_rows    : in  std_logic_vector(3 downto 0);
+        kypd_cols    : out std_logic_vector(3 downto 0)
     );
 end tt_um_example;
 
 architecture Behavioral of tt_um_example is
 
-signal grid : std_logic_vector(15 downto 0) := (others => '0');
 
+component drawer
+    port (
+        clk : in std_logic;
+        data_in : in std_logic_vector(15 downto 0);
+        rst_n : in std_logic;
+        data_out : out std_logic;
+        cs : out std_logic
+    );
+end component;
+
+component KYPD_encoder
+    port (
+        clk      : in  std_logic;                      -- system clock
+        reset    : in  std_logic;
+        rows     : in  std_logic_vector(3 downto 0);  -- ROW1–ROW4
+        cols     : out std_logic_vector(3 downto 0);  -- COL1–COL4
+        key_code : out std_logic_vector(3 downto 0);  -- hex value 0–F
+        key_valid: out std_logic                      -- high when a key is
+    );
+end component;
+
+    signal input : std_logic_vector(3 downto 0);
+    signal strobe : std_logic;
+    signal grid : std_logic_vector(15 downto 0) := (others => '0');
 
 begin
-    output_grid <= grid;
+
+    main_drawer : drawer
+        port map (
+            clk => clk,
+            data_in => grid,
+            rst_n => rst_n,
+            data_out => display_data,
+            cs => display_cs
+        );
+    
+    main_KYPD_encoder : KYPD_encoder
+        port map (
+            clk => clk,
+            reset => rst_n,
+            rows => kypd_rows,
+            cols => kypd_cols,
+            key_code => input,
+            key_valid => strobe
+        );
 
     process(clk, rst_n)
     begin
