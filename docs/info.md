@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Click on hexpad to flip the bits. Aim for a completely empty board. Good luck.
 
 ## How to test
 
-Explain how to use your project
+Click on any hex key, this should result in some lights inverting on the screen. Position on keypad correlates to position on screen.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+PMOD HEX-Keypad and MAXI 8x8 led display (ask creators if unsure) (We will probably not know).
