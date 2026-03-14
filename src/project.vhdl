@@ -30,14 +30,14 @@ component drawer
     );
 end component;
 
-component KYPD_encoder
+component PmodKYPD
     port (
         clk      : in  std_logic;                      -- system clock
-        reset    : in  std_logic;
-        rows     : in  std_logic_vector(3 downto 0);  -- ROW1–ROW4
-        cols     : out std_logic_vector(3 downto 0);  -- COL1–COL4
-        key_code : out std_logic_vector(3 downto 0);  -- hex value 0–F
-        key_valid: out std_logic                      -- high when a key is
+        rst    : in  std_logic;
+        row     : in  std_logic_vector(3 downto 0);  -- ROW1–ROW4
+        col     : out std_logic_vector(3 downto 0);  -- COL1–COL4
+        key : out std_logic_vector(3 downto 0);  -- hex value 0–F
+        strobe: out std_logic                      -- high when a key is
     );
 end component;
 
@@ -56,14 +56,14 @@ begin
             cs => display_cs
         );
     
-    main_KYPD_encoder : KYPD_encoder
+    main_KYPD_encoder : PmodKYPD
         port map (
             clk => clk,
-            reset => rst_n,
-            rows => kypd_rows,
-            cols => kypd_cols,
-            key_code => input,
-            key_valid => strobe
+            rst => rst_n,
+            row => kypd_rows,
+            col => kypd_cols,
+            key => input,
+            strobe => strobe
         );
 
     process(clk, rst_n)
