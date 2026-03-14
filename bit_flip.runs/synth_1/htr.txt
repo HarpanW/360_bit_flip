@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log tt_um_example.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tt_um_example.tcl
+vivado -log tt_um_aromo613harwo861hamse755arvno337.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tt_um_aromo613harwo861hamse755arvno337.tcl

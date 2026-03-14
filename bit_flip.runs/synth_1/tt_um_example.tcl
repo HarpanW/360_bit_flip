@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1/tt_um_example.tcl"
+  variable script "/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1/tt_um_aromo613harwo861hamse755arvno337.tcl"
   variable category "vivado_synth"
 }
 
@@ -111,11 +111,11 @@ set_property used_in_implementation false [get_files /home/harwo861/Desktop/360_
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/harwo861/Desktop/360_bit_flip/bit_flip.srcs/utils_1/imports/synth_1/tt_um_example.dcp
+read_checkpoint -auto_incremental -incremental /home/harwo861/Desktop/360_bit_flip/bit_flip.srcs/utils_1/imports/synth_1/tt_um_aromo613harwo861hamse755arvno337.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top tt_um_example -part xc7a35tcpg236-1
+synth_design -top tt_um_aromo613harwo861hamse755arvno337 -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -125,10 +125,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef tt_um_example.dcp
+write_checkpoint -force -noxdef tt_um_aromo613harwo861hamse755arvno337.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file tt_um_example_utilization_synth.rpt -pb tt_um_example_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file tt_um_aromo613harwo861hamse755arvno337_utilization_synth.rpt -pb tt_um_aromo613harwo861hamse755arvno337_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -17,6 +17,6 @@
 # ****************************************************************************
 set -Eeuo pipefail
 # simulate design
-echo "xsim tt_um_example_behav -key {Behavioral:sim_1:Functional:tt_um_example} -tclbatch tt_um_example.tcl -log simulate.log"
-xsim tt_um_example_behav -key {Behavioral:sim_1:Functional:tt_um_example} -tclbatch tt_um_example.tcl -log simulate.log
+echo "xsim tt_um_aromo613harwo861hamse755arvno337_behav -key {Behavioral:sim_1:Functional:tt_um_aromo613harwo861hamse755arvno337} -tclbatch tt_um_aromo613harwo861hamse755arvno337.tcl -log simulate.log"
+xsim tt_um_aromo613harwo861hamse755arvno337_behav -key {Behavioral:sim_1:Functional:tt_um_aromo613harwo861hamse755arvno337} -tclbatch tt_um_aromo613harwo861hamse755arvno337.tcl -log simulate.log
 

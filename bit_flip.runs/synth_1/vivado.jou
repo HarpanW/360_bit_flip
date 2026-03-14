@@ -6,9 +6,9 @@
 # Start of session at: Sat Mar 14 17:39:36 2026
 # Process ID: 265807
 # Current directory: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1
-# Command line: vivado -log tt_um_example.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tt_um_example.tcl
-# Log file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1/tt_um_example.vds
+# Command line: vivado -log tt_um_aromo613harwo861hamse755arvno337.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tt_um_aromo613harwo861hamse755arvno337.tcl
+# Log file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1/tt_um_aromo613harwo861hamse755arvno337.vds
 # Journal file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/synth_1/vivado.jou
 # Running On: muxen2-111.ad.liu.se, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 12, Host memory: 16198 MB
 #-----------------------------------------------------------
-source tt_um_example.tcl -notrace
+source tt_um_aromo613harwo861hamse755arvno337.tcl -notrace

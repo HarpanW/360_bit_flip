@@ -17,6 +17,6 @@
 # ****************************************************************************
 set -Eeuo pipefail
 # elaborate design
-echo "xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tt_um_example_behav xil_defaultlib.tt_um_example -log elaborate.log"
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tt_um_example_behav xil_defaultlib.tt_um_example -log elaborate.log
+echo "xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tt_um_aromo613harwo861hamse755arvno337_behav xil_defaultlib.tt_um_aromo613harwo861hamse755arvno337 -log elaborate.log"
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tt_um_aromo613harwo861hamse755arvno337_behav xil_defaultlib.tt_um_aromo613harwo861hamse755arvno337 -log elaborate.log
 

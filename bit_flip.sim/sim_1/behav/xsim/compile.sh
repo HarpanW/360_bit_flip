@@ -17,8 +17,8 @@
 # ****************************************************************************
 set -Eeuo pipefail
 # compile VHDL design sources
-echo "xvhdl --incr --relax -prj tt_um_example_vhdl.prj"
-xvhdl --incr --relax -prj tt_um_example_vhdl.prj 2>&1 | tee compile.log
+echo "xvhdl --incr --relax -prj tt_um_aromo613harwo861hamse755arvno337_vhdl.prj"
+xvhdl --incr --relax -prj tt_um_aromo613harwo861hamse755arvno337_vhdl.prj 2>&1 | tee compile.log
 
 echo "Waiting for jobs to finish..."
 echo "No pending jobs, compilation finished."

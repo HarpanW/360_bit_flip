@@ -3,8 +3,8 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanc
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
 | Date             : Sat Mar 14 17:40:43 2026
 | Host             : muxen2-111.ad.liu.se running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
-| Command          : report_power -file tt_um_example_power_routed.rpt -pb tt_um_example_power_summary_routed.pb -rpx tt_um_example_power_routed.rpx
-| Design           : tt_um_example
+| Command          : report_power -file tt_um_aromo613harwo861hamse755arvno337_power_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_power_summary_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_power_routed.rpx
+| Design           : tt_um_aromo613harwo861hamse755arvno337
 | Device           : xc7a35tcpg236-1
 | Design State     : routed
 | Grade            : commercial
@@ -140,7 +140,7 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| tt_um_example |     0.023 |
+| tt_um_aromo613harwo861hamse755arvno337 |     0.023 |
 +---------------+-----------+
 
 

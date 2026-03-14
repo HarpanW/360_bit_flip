@@ -15,7 +15,7 @@ $(warning ************ Gate level simulation selected but currently not set up o
 endif
 
 # Toplevel name of your VHDL project
-COCOTB_TOPLEVEL = tt_um_example
+COCOTB_TOPLEVEL = tt_um_aromo613harwo861hamse755arvno337
 
 TOPLEVEL_LANG = vhdl
 SIM = ghdl

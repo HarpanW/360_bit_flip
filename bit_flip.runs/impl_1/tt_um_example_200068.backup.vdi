@@ -6,13 +6,13 @@
 # Start of session at: Sat Mar 14 16:52:07 2026
 # Process ID: 200068
 # Current directory: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1
-# Command line: vivado -log tt_um_example.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source tt_um_example.tcl -notrace
-# Log file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example.vdi
+# Command line: vivado -log tt_um_aromo613harwo861hamse755arvno337.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source tt_um_aromo613harwo861hamse755arvno337.tcl -notrace
+# Log file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337.vdi
 # Journal file: /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/vivado.jou
 # Running On: muxen2-111.ad.liu.se, OS: Linux, CPU Frequency: 2435.648 MHz, CPU Physical cores: 12, Host memory: 16198 MB
 #-----------------------------------------------------------
-source tt_um_example.tcl -notrace
-Command: link_design -top tt_um_example -part xc7a35tcpg236-1
+source tt_um_aromo613harwo861hamse755arvno337.tcl -notrace
+Command: link_design -top tt_um_aromo613harwo861hamse755arvno337 -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
@@ -281,13 +281,13 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2992.895 ; g
 INFO: [Common 17-83] Releasing license: Implementation
 25 Infos, 32 Warnings, 32 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-INFO: [runtcl-4] Executing : report_drc -file tt_um_example_drc_opted.rpt -pb tt_um_example_drc_opted.pb -rpx tt_um_example_drc_opted.rpx
-Command: report_drc -file tt_um_example_drc_opted.rpt -pb tt_um_example_drc_opted.pb -rpx tt_um_example_drc_opted.rpx
+INFO: [runtcl-4] Executing : report_drc -file tt_um_aromo613harwo861hamse755arvno337_drc_opted.rpt -pb tt_um_aromo613harwo861hamse755arvno337_drc_opted.pb -rpx tt_um_aromo613harwo861hamse755arvno337_drc_opted.rpx
+Command: report_drc -file tt_um_aromo613harwo861hamse755arvno337_drc_opted.rpt -pb tt_um_aromo613harwo861hamse755arvno337_drc_opted.pb -rpx tt_um_aromo613harwo861hamse755arvno337_drc_opted.rpx
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/sw/xilinx/2023.2/Vivado/2023.2/data/ip'.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_drc_opted.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 385 ; free virtual = 12508
@@ -300,7 +300,7 @@ Wrote RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory
 Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 381 ; free virtual = 12504
 Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 381 ; free virtual = 12504
 Write Physdb Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 381 ; free virtual = 12504
-INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_opt.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -532,10 +532,10 @@ Ending Placer Task | Checksum: 1df83bc23
 Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.65 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 346 ; free virtual = 12465
 62 Infos, 32 Warnings, 32 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-INFO: [runtcl-4] Executing : report_io -file tt_um_example_io_placed.rpt
+INFO: [runtcl-4] Executing : report_io -file tt_um_aromo613harwo861hamse755arvno337_io_placed.rpt
 report_io: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 343 ; free virtual = 12461
-INFO: [runtcl-4] Executing : report_utilization -file tt_um_example_utilization_placed.rpt -pb tt_um_example_utilization_placed.pb
-INFO: [runtcl-4] Executing : report_control_sets -verbose -file tt_um_example_control_sets_placed.rpt
+INFO: [runtcl-4] Executing : report_utilization -file tt_um_aromo613harwo861hamse755arvno337_utilization_placed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file tt_um_aromo613harwo861hamse755arvno337_control_sets_placed.rpt
 report_control_sets: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 343 ; free virtual = 12462
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 345 ; free virtual = 12464
@@ -548,7 +548,7 @@ Wrote RouteStorage: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory
 Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 345 ; free virtual = 12463
 Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 345 ; free virtual = 12464
 Write Physdb Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 344 ; free virtual = 12463
-INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_placed.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -572,7 +572,7 @@ Wrote RouteStorage: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory
 Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 317 ; free virtual = 12436
 Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 317 ; free virtual = 12436
 Write Physdb Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3080.938 ; gain = 0.000 ; free physical = 317 ; free virtual = 12436
-INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_physopt.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -750,34 +750,34 @@ INFO: [Common 17-83] Releasing license: Implementation
 86 Infos, 32 Warnings, 32 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
 route_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3144.422 ; gain = 63.484 ; free physical = 171 ; free virtual = 12266
-INFO: [runtcl-4] Executing : report_drc -file tt_um_example_drc_routed.rpt -pb tt_um_example_drc_routed.pb -rpx tt_um_example_drc_routed.rpx
-Command: report_drc -file tt_um_example_drc_routed.rpt -pb tt_um_example_drc_routed.pb -rpx tt_um_example_drc_routed.rpx
+INFO: [runtcl-4] Executing : report_drc -file tt_um_aromo613harwo861hamse755arvno337_drc_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_drc_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_drc_routed.rpx
+Command: report_drc -file tt_um_aromo613harwo861hamse755arvno337_drc_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_drc_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_drc_routed.rpt.
 report_drc completed successfully
-INFO: [runtcl-4] Executing : report_methodology -file tt_um_example_methodology_drc_routed.rpt -pb tt_um_example_methodology_drc_routed.pb -rpx tt_um_example_methodology_drc_routed.rpx
-Command: report_methodology -file tt_um_example_methodology_drc_routed.rpt -pb tt_um_example_methodology_drc_routed.pb -rpx tt_um_example_methodology_drc_routed.rpx
+INFO: [runtcl-4] Executing : report_methodology -file tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.rpx
+Command: report_methodology -file tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_methodology_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_methodology_drc_routed.rpt.
 report_methodology completed successfully
-INFO: [runtcl-4] Executing : report_power -file tt_um_example_power_routed.rpt -pb tt_um_example_power_summary_routed.pb -rpx tt_um_example_power_routed.rpx
-Command: report_power -file tt_um_example_power_routed.rpt -pb tt_um_example_power_summary_routed.pb -rpx tt_um_example_power_routed.rpx
+INFO: [runtcl-4] Executing : report_power -file tt_um_aromo613harwo861hamse755arvno337_power_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_power_summary_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_power_routed.rpx
+Command: report_power -file tt_um_aromo613harwo861hamse755arvno337_power_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_power_summary_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 96 Infos, 32 Warnings, 32 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-INFO: [runtcl-4] Executing : report_route_status -file tt_um_example_route_status.rpt -pb tt_um_example_route_status.pb
-INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file tt_um_example_timing_summary_routed.rpt -pb tt_um_example_timing_summary_routed.pb -rpx tt_um_example_timing_summary_routed.rpx -warn_on_violation 
+INFO: [runtcl-4] Executing : report_route_status -file tt_um_aromo613harwo861hamse755arvno337_route_status.rpt -pb tt_um_aromo613harwo861hamse755arvno337_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file tt_um_aromo613harwo861hamse755arvno337_timing_summary_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_timing_summary_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-INFO: [runtcl-4] Executing : report_incremental_reuse -file tt_um_example_incremental_reuse_routed.rpt
+INFO: [runtcl-4] Executing : report_incremental_reuse -file tt_um_aromo613harwo861hamse755arvno337_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
-INFO: [runtcl-4] Executing : report_clock_utilization -file tt_um_example_clock_utilization_routed.rpt
-INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file tt_um_example_bus_skew_routed.rpt -pb tt_um_example_bus_skew_routed.pb -rpx tt_um_example_bus_skew_routed.rpx
+INFO: [runtcl-4] Executing : report_clock_utilization -file tt_um_aromo613harwo861hamse755arvno337_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file tt_um_aromo613harwo861hamse755arvno337_bus_skew_routed.rpt -pb tt_um_aromo613harwo861hamse755arvno337_bus_skew_routed.pb -rpx tt_um_aromo613harwo861hamse755arvno337_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
 INFO: [Timing 38-480] Writing timing data to binary archive.
@@ -791,5 +791,5 @@ Wrote RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory
 Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3250.309 ; gain = 0.000 ; free physical = 169 ; free virtual = 12234
 Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3250.309 ; gain = 0.000 ; free physical = 169 ; free virtual = 12234
 Write Physdb Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3250.309 ; gain = 0.000 ; free physical = 168 ; free virtual = 12234
-INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example_routed.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337_routed.dcp' has been generated.
 INFO: [Common 17-206] Exiting Vivado at Sat Mar 14 16:52:30 2026...

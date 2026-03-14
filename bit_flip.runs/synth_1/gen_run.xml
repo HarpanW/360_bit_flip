@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1773506374" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tt_um_example.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="tt_um_example_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="tt_um_example.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="tt_um_example_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="tt_um_example_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="tt_um_example_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="tt_um_example.vds"/>
-  <File Type="REPORTS-TCL" Name="tt_um_example_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="tt_um_example_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="tt_um_example.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1773506374" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tt_um_aromo613harwo861hamse755arvno337.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="tt_um_aromo613harwo861hamse755arvno337_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="tt_um_aromo613harwo861hamse755arvno337.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="tt_um_aromo613harwo861hamse755arvno337_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="tt_um_aromo613harwo861hamse755arvno337_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="tt_um_aromo613harwo861hamse755arvno337_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="tt_um_aromo613harwo861hamse755arvno337.vds"/>
+  <File Type="REPORTS-TCL" Name="tt_um_aromo613harwo861hamse755arvno337_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="tt_um_aromo613harwo861hamse755arvno337_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="tt_um_aromo613harwo861hamse755arvno337.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/src/KYPD_encoder.vhdl">
@@ -31,7 +31,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="tt_um_example"/>
+      <Option Name="TopModule" Val="tt_um_aromo613harwo861hamse755arvno337"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -49,7 +49,7 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/tt_um_example.dcp">
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/tt_um_aromo613harwo861hamse755arvno337.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

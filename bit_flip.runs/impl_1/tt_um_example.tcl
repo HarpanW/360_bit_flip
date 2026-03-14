@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_example.tcl"
+  variable script "/home/harwo861/Desktop/360_bit_flip/bit_flip.runs/impl_1/tt_um_aromo613harwo861hamse755arvno337.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,21 +130,21 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param synth.incrementalSynthesisCache ./.Xil/Vivado-116645-muxen2-111.ad.liu.se/incrSyn
   set_param runs.launchOptions { -jobs 10  }
-  open_checkpoint tt_um_example_routed.dcp
+  open_checkpoint tt_um_aromo613harwo861hamse755arvno337_routed.dcp
   set_property webtalk.parent_dir /home/harwo861/Desktop/360_bit_flip/bit_flip.cache/wt [current_project]
-set_property TOP tt_um_example [current_fileset]
+set_property TOP tt_um_aromo613harwo861hamse755arvno337 [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi tt_um_example.mmi }
+  catch { write_mem_info -force -no_partial_mmi tt_um_aromo613harwo861hamse755arvno337.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force tt_um_example.bit 
+  write_bitstream -force tt_um_aromo613harwo861hamse755arvno337.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force tt_um_example}
-  catch {file copy -force tt_um_example.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force tt_um_aromo613harwo861hamse755arvno337}
+  catch {file copy -force tt_um_aromo613harwo861hamse755arvno337.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
