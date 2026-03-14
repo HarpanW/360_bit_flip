@@ -17,35 +17,60 @@ architecture Behavioral of drawer is
     signal cnt : std_logic_vector (3 downto 0);
     signal curr_word : std_logic_vector (15 downto 0);
     signal get_word : std_logic;
+    signal init     : std_logic_vector (1 downto 0) := "11";
+
+
+    procedure shift_data(
+        signal   counter   : inout integer;
+        signal   word      : inout std_logic_vector(15 downto 0);
+        signal   data_bit  : out   std_logic;
+        signal   get_next  : out   std_logic
+    ) is
+    begin
+        if counter = 15 then
+            get_next <= '1';
+        end if;
+        counter <= counter + 1; -- Overflows
+        cs <= '1';
+
+        -- Skifta ut MSB
+        data_bit <= word(15);
+        word <= word(14 downto 0) & '0';
+    end procedure;
+
 begin
     -- Game loop
     -- Get output (fixa alla 16 bitar direkt)
     -- Skifta ut dem 
     -- Skicka CS
     -- repeat
+
+        
+
     process(clk)
     begin
+    if rst_n = '1' then
+        curr_word <= (others => '0');
+        cnt <= (others => '0');
+        get_word <= '1';
+        cs <= '1';
+        init <= "11";
+    end if;
     if rising_edge(clk) then
-        if rst_n = '1' then
-            curr_word <= (others => '0');
-            cnt <= (others => '0');
-            get_word <= '1';
-            cs <= '1';
+        if init = 3 then -- Subrutin för att slå på kretsen
+            if cnt = 0 then
+                curr_word <= x"0C01"; -- Slå på kretsen
+            end if;
+            shift_data(cnt, curr_word, data_out, init);
+
+        
         elsif get_word = '1' then
             curr_word <= "0000" & std_logic_vector(unsigned(row) + 2)(3 downto 0) & "00" & data_in(unsigned(row)*4 + 3 downto unsigned(row)*4) & "00"; -- pro
             row <= row + 1; -- Overflows
             cs <= '0';
             get_word <= '0';
         else
-            if cnt = 15 then
-                get_word <= '1';
-            end if;
-            cnt <= cnt + 1; -- Overflows
-            cs <= '1';
-
-            -- Skifta ut MSB
-            data_out <= curr_word(15);
-            curr_word <= curr_word(14 downto 0) & '0';
+            shift_data(cnt, curr_word, data_out, get_word);
         end if;
     end if;
     end process;
